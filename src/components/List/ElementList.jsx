@@ -1,13 +1,13 @@
 import ElementImage from "./ElementImage";
-const ElementList = (props) =>
-    <li>
-        <ElementImage 
-            number={props.number}
-            name={props.name}
-        />  
-        <span className="number">N. {props.number}</span>
-        <span className="name">{props.name}</span>
-        <span className="type">{props.type}</span>
-        <a href="#" className="link">Ver detalle</a>
-    </li>;
+
+const ElementList = ({pokemons}) =>
+    pokemons.map(pokemon =>
+        <li key={pokemon.id}>
+            <ElementImage name={pokemon.name}/>
+            <span className="number">N. {pokemon.id}</span>
+            <span className="name">{pokemon.name}</span>
+            <span className="type">{pokemon.type}</span>
+        </li>
+    )
+
 export default ElementList;

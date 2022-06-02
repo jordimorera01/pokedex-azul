@@ -1,17 +1,7 @@
-import ElementList from "./ElementList";
+const List = ({children}) =>
 
-const List = () =>
     <ul>
-        <ElementList 
-            number="1"
-            name="Bulbasur"
-            type="Planta"
-        />
-        <ElementList 
-            number="4"
-            name="Charmander"
-            type="Fuego"
-        />
+        {children}
     </ul>;
 
 export default List;

@@ -1,5 +1,5 @@
-const ElementImage = (props) =>
+const ElementImage = ({name}) =>
 
-    <img src={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + props.number + ".png"} alt={props.name}/>;
+    <img src={`./img/${name}.png`} alt={name}/>
 
 export default ElementImage;
