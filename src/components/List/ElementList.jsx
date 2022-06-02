@@ -1,10 +1,13 @@
 import ElementImage from "./ElementImage";
-const ElementList = () =>
+const ElementList = (props) =>
     <li>
-        <ElementImage />  
-        <span className="number">N. 001</span>
-        <span className="name">Bulbasaur</span>
-        <span className="type">Fuego</span>
-        <span className="link">Ver detalle</span>
+        <ElementImage 
+            number={props.number}
+            name={props.name}
+        />  
+        <span className="number">N. {props.number}</span>
+        <span className="name">{props.name}</span>
+        <span className="type">{props.type}</span>
+        <a href="#" className="link">Ver detalle</a>
     </li>;
 export default ElementList;
