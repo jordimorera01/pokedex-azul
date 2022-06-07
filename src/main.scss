@@ -26,6 +26,10 @@ ul{
       }
       &.name{
         font-weight: bold;
+        min-width: 150px;
+      }
+      &.number{
+        min-width: 100px;
       }
     }
   }

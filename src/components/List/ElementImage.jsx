@@ -1,5 +1,5 @@
-const ElementImage = ({name}) =>
+const ElementImage = ({url, name}) =>
 
-    <img src={`./img/${name}.png`} alt={name}/>
+    <img src={url} alt={name}/>
 
 export default ElementImage;

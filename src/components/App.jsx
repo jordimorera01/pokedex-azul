@@ -1,16 +1,14 @@
 import List from "./List";
 import ElementList from "./List/ElementList";
+import pokemons from "../../public/data/pokemons.json"
 
 const App = () => {
-    const pokemons = [
-        {"id":1, "name":"Bulbasaur", "type":"Planta"}, 
-        {"id":2, "name":"Charmander", "type":"Fuego"},
-        {"id":3, "name":"Squirtle", "type":"Agua"}
-    ];
-
-    return <List>
-        <ElementList pokemons={pokemons}/>
-    </List>;
+    
+    const pokemonsList = pokemons.filter (pokemon => pokemon.types.find(type => type === "xxx"));
+    console.log(pokemonsList);
+    return  <List>
+                <ElementList pokemons={pokemonsList}/>
+            </List>;
 }
 
 export default App;
